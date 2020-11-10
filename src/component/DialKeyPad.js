@@ -5,7 +5,8 @@ import {
   View,
   TouchableOpacity,
   Animated,
-  Dimensions
+  Dimensions,
+  Text
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import DialNumber from './DialNumber'
@@ -60,7 +61,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'transparent',
     top: 100,
-    height: windowHeight - 200
+    height: windowHeight - 200,
+    zIndex: 99999
   },
   closeButton: {
     height: 30,
@@ -70,8 +72,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    right: 10,
-    top: 20
+    right: 20,
+    top: 50
   },  
   headerView: {
     height: '50%',
@@ -86,7 +88,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent:'center'
+    justifyContent:'center',
+    paddingTop: 20
   }
 });
 export default DialKeyPad;

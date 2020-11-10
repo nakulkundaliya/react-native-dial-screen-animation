@@ -18,12 +18,17 @@ const windowHeight = Dimensions.get('window').height;
 
 const App = () => {
   const [doAnimation, setDoAnimation] = useState(false);
+
+  const dial = () => {
+    if(!doAnimation){
+      setDoAnimation(!doAnimation)
+    }
+  }
+
   return (
     <>
       <SafeAreaView style={styles.container}>
-        <DialFab doAnimation={doAnimation} onPress={() => {
-          setDoAnimation(!doAnimation)
-        }} />
+        <DialFab doAnimation={doAnimation} onPress={dial} />
         <DialKeyPad doAnimation={doAnimation} onClose={() => { 
           setDoAnimation(!doAnimation)
         }}/>
